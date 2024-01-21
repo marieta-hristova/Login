@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Login and Registration form example</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <form name="f1" action="authentication.php" onsubmit="return validation()" method="POST" id="flogin">
+            <div class="border-box">
+                <h2>Login Form</h2>
+                <label for="uname" id="un">Username:</label>
+                <input type="text" name="username" placeholder="Enter Username" id="uname"><br />
+                <label for="upass" id="ps">Password:</label>
+                <input type="password" name="password" placeholder="Enter Password" id="upass"><br />
+                <button type="submit" value="Login" id="submit">Login</button>
+                <a href="register.html">New Member</a>
+            </div>
+        </form>
+    </div>
+    <script>
+        function validation() {
+            var id = document.f1.uname.value;   //document.’form name’/. input type ‘id’ 
+            var ps = document.f1.upass.value;  //id
+            if (id.length == "" && ps.length == "") {
+                alert("User Name and Password fields are empty");
+                return false;
+            }
+            else {
+                if (id.length == "") {
+                    alert("User Name is empty");
+                    return false;
+                }
+                if (ps.length == "") {
+                    alert("Password field is empty");
+                    return false;
+                }
+            }
+        }  
+    </script>
+</body>
+
+</html>
+
+</body>
+
+</html>
